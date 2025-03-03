@@ -1,0 +1,45 @@
+.search{
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__title{
+        margin: 0;
+        font-weight: 900;
+        font-size: 50px;
+        color: #dc56c5;
+
+        text-align: center;
+
+    }
+    &__inputWrapper{
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 20px;
+        width: 270px;
+        height: 40px;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.2);
+
+
+    }
+    &__input {
+        border: none;
+        outline: none;
+        background: none;
+        // color: #939393 !important;
+    }
+
+    &__dropdown{
+        padding: 0;
+        background:none;
+        border: none;
+        color: #939393;
+    }
+}
+
+.containerSearch{
+    width: 589px;
+    margin: 0 auto;
+}
