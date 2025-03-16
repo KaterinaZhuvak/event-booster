@@ -18,12 +18,7 @@
     "url": "https://github.com/KaterinaZhuvak/event-booster/issues"
   },
   "dependencies": {
-<<<<<<< HEAD
     "modern-normalize": "^1.1.0"
-=======
-    "modern-normalize": "^1.1.0",
-    "parcel-transformer-hbs": "^1.0.4"
->>>>>>> feature/main
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

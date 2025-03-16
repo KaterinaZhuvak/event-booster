@@ -97,6 +97,7 @@
     @media (min-width: 320px) {
       width: 128px;
       height: 242px;
+      margin-bottom: 45px;
     }
     @media (min-width: 595px) {
       width: 196px;
@@ -108,18 +109,39 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-    // height:1760px;
-    // gap: 5px;
     margin: 0 auto;
-    // @media (min-width: 320px) {
-    //   width: 280px;
-    // }
-    // @media (min-width: 768px) {
-    //   width: 620px;
-    // }
-    // @media (min-width: 1400px) {
-    //   width: 946px;
-    // }
+     @media (min-width: 320px) {
+       width: 280px;
+     }
+     @media (min-width: 768px) {
+       width: 620px;
+     }
+     @media (min-width: 1400px) {
+       width: 946px;
+     }
   }
+     &__btnsBlock{
+       display:flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: row;
+       gap: 5px;
+    
+      // margin: 0 auto;
+
+
+     }
+
+}
+.cards__btn{
+  font-family:"Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #0E0E0E;
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
 }

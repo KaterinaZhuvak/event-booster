@@ -49,10 +49,10 @@ const renderPagination = async() => {
       button.dataset.page = i
       button.textContent = i
       if (i === currentPage) {
-        button.disabled = true
-        button.style.background = '#6d8434'
-        
-        button.style.color = '#e8e8e2'
+        button.disabled = true;
+         button.style.border ="#DC56C5, 1px, solid";
+        button.style.borderRadius = '20px 0';
+        button.style.color = "#DC56C5"
       }
       if (i === total) {
         button.textContent = '...'
