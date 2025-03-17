@@ -1,0 +1,16 @@
+.footer {
+  &__text {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    text-align: center;
+    color: #939393;
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.21;
+    }
+  }
+}

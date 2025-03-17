@@ -1,7 +1,5 @@
-@import './common';
-@import './example';
-@import './sections/modal';
-@import './general';
-@import './utilits/common';
-@import './utilits/general';
-@import './event-cards'
+@use './sections/modal';
+@use './utilits/common';
+@use './utilits/general';
+@use './sections/event-cards';
+@use './sections/footer';
