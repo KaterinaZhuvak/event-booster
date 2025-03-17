@@ -5,12 +5,8 @@
   "reporters": [
     "...",
     "parcel-reporter-clean-dist"
-<<<<<<< HEAD
-  ]
-=======
   ],
   "transformers": {
     "*.hbs": ["parcel-transformer-hbs"]
   }
->>>>>>> feature/main
 }

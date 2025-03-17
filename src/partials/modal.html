@@ -1,12 +1,11 @@
-<section class="modal">
-  <button id="myBtn">Open Modal</button>
+<button class="open-button" type="button" data-modal-open>modal knopka</button>
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-    </div>
+<div class="backdrop is-hidden">
+  <div class="modal">
+    <button class="close-button" type="button" data-modal-close>
+      <img src="./images/icons/close.svg" alt="сlose-icon" />
+    </button>
+
+    <div class="modal__main-container"></div>
   </div>
-</section>
+</div>
