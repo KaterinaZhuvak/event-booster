@@ -5,7 +5,8 @@
   "homepage": "https://github.com/KaterinaZhuvak/event-booster",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /event-booster/"
+    "build": "parcel build src/*.html --public-url /event-booster/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "@parcel/transformer-css": "^2.14.1",
+    "gh-pages": "^6.3.0",
     "lodash": "^4.17.21",
     "modern-normalize": "^1.1.0",
     "parcel-transformer-hbs": "^1.0.4"
