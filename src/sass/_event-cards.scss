@@ -120,19 +120,57 @@
        width: 946px;
      }
   }
-     &__btnsBlock{
-       display:flex;
-       align-items: center;
-       justify-content: center;
-       flex-direction: row;
-       gap: 5px;
-    
-      // margin: 0 auto;
-
-
-     }
-
+  
+  // Loading state
+  &__loading, &__no-results, &__error {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+  
+  &__loading {
+    position: relative;
+    &:after {
+      content: '...';
+      position: absolute;
+      animation: dots 1.5s steps(5, end) infinite;
+    }
+  }
+  
+  &__no-results {
+    color: #DC56C5;
+  }
+  
+  &__error {
+    color: #FF4A4A;
+  }
+  
+  &__btnsBlock{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+  }
 }
+
+// Animation for loading dots
+@keyframes dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}
+
 .cards__btn{
   font-family:"Montserrat", sans-serif;
   font-weight: 400;
