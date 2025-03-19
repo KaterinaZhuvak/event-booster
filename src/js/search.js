@@ -1,6 +1,12 @@
 import countries from '../../countries.json'
 import _ from 'lodash'
 
+import cardstemplate from '../templates/cards.hbs'
+
+
+const cardsList = document.querySelector(".events__list")
+
+
 const dropdown = document.getElementById('js-dropdown')
 const inputSearch = document.getElementById('js-inputSearch')
 
@@ -54,6 +60,21 @@ const getCardsByCountry = async () => {
         const response = await fetch(URL + param.toString())
         const posts = await response.json()
         console.log(posts);
+
+        const events = posts
+               
+        const markup =  events._embedded.events.map(event => {
+            const eventparams = {
+            id: event.id,
+            img:event.images[0].url,
+            date:event.dates.start.localDate,
+            name:event.name,
+            location:event._embedded.venues[0].name
+            }
+            return cardstemplate(eventparams)
+        })
+                
+        cardsList.innerHTML = markup.join("")
         
     }
     catch (err) {
@@ -78,6 +99,22 @@ const getCardsByKeyword = async () => {
         const response = await fetch(URL + param.toString())
         const posts = await response.json()
         console.log(posts);
+
+
+        const events =  posts
+               
+        const markup =  events._embedded.events.map(event => {
+            const eventparams = {
+            id: event.id,
+            img:event.images[0].url,
+            date:event.dates.start.localDate,
+            name:event.name,
+            location:event._embedded.venues[0].name
+            }
+            return cardstemplate(eventparams)
+        })
+                
+        cardsList.innerHTML = markup.join("")
         
     }
     catch (err) {
