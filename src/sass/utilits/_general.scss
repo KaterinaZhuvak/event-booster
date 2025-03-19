@@ -1,37 +1,36 @@
 html {
   scroll-behavior: smooth;
-  
 }
-
 
 :root {
---font-family: "Montserrat", sans-serif;
+  --font-family: "Montserrat", sans-serif;
 }
+
 .container {
   margin: 0 auto;
 
   @media (min-width: 320px) {
-    // padding: 0 15px;
-    // width: 100%;
     width: 280px;
   }
+  
   @media (min-width: 375px) {
     width: 280px;
-    // padding: 0;
-    padding: 0 , auto;
+    padding: 0, auto;
   }
+  
   @media (min-width: 768px) {
     padding: 0;
-    width: 610px
+    width: 610px;
   }
-  @media (min-width:1280px){
-    width: 1050px; 
+  
+  @media (min-width: 1280px) {
+    width: 1050px;
   }
+  
   @media (min-width: 1600px) {
     width: 1440px;
     padding: 0;
   }
-  // test
 }
 
 img {
@@ -40,24 +39,25 @@ img {
   display: block;
 }
 
-ul,
-ol {
+ul, ol {
   list-style-type: none;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 body {
   font-family: "Inter", sans-serif;
   font-style: normal;
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -69,7 +69,18 @@ p {
   box-sizing: border-box;
 }
 
+button {
+  padding: 0;
+  border: none;
+}
+
+/* Show/Hide classes */
 .is-show {
   opacity: 1;
   pointer-events: all;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }

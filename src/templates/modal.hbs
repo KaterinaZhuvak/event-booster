@@ -1,0 +1,65 @@
+<div class="modal__top-image-container">
+  <picture class="modal__top-image">
+    <source srcset="{{images.[2].url}} 1x, {{images.[3].url}} 2x" media="(min-width: 1200px)" />
+    <source srcset="{{images.[1].url}} 1x, {{images.[2].url}} 2x" media="(min-width: 768px)" />
+    <source srcset="{{images.[0].url}} 1x, {{images.[1].url}} 2x" media="(max-width: 767px)" />
+  <img src="" alt="Author" class="modal__top-image" />
+  </picture>
+</div>
+
+<div class="modal__information-container">
+  <div class="modal__side-image-container">
+    <picture class="modal__side-image">
+      <source srcset="{{images.[2].url}} 1x, {{images.[3].url}} 2x" media="(min-width: 1200px)" />
+      <source srcset="{{images.[1].url}} 1x, {{images.[2].url}} 2x" media="(min-width: 768px)" />
+      <source srcset="{{images.[0].url}} 1x, {{images.[1].url}} 2x" media="(max-width: 767px)" />
+      <img src="" alt="Author" class="modal__side-image" />
+    </picture>
+  </div>
+
+  <div class="modal__main-information">
+    <h2 class="modal__title">Info</h2>
+    <p class="modal__subtitle">{{info}}</p>
+    <h2 class="modal__title">When</h2>
+    <p class="modal__subtitle">{{dates.start.localDate}}<br>{{dates.start.localTime}} ({{dates.timezone}})</p>
+    <h2 class="modal__title">Where</h2>
+    <div class="modal__ticket-and-location-container">
+      {{#each _embedded.venues}}
+      <p class="modal__subtitle">
+        <svg class="modal__location-icon">
+          <path
+            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+        </svg>
+        {{this.city.name}}, {{this.country.name}}<br>{{this.name}}
+      </p>
+      <a class="modal__external-link"
+        href='https://maps.google.com/?ll={{this.location.latitude}},{{this.location.longitude}}' target="_blank"
+        title="Show location">
+        Location
+      </a>
+      {{/each}}
+    </div>
+    <h2 class="modal__title">Who</h2>
+    <p class="modal__subtitle">{{name}}</p>
+    <h2 class="modal__title">Prices</h2>
+    <div class="modal__ticket-and-location-container">
+      {{#each priceRanges}}
+      <p class="modal__subtitle">
+        <svg class="modal__ticket-barcode">
+          <path
+            d="M2.67 0H0v16h2.67zm6.7 0H6.71v16h2.66zm4 0h-2.62v16h2.66zM24 0h-4v16h4zM5.33 0H4v16h1.33zM16 0h-1.29v16H16zm2.67 0h-1.3v16h1.3z" />
+        </svg>
+        {{this.type}} {{this.min}}-{{this.max}} {{this.currency}}
+      </p>
+      {{/each}}
+      <a class="modal__external-link" href='{{url}}' target="_blank" title="More from this author">
+        Buy tickets
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<a class="modal__more-info-link" href='#' title="More from this author">
+  More from this author
+</a>

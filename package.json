@@ -21,8 +21,10 @@
   "dependencies": {
     "@parcel/transformer-css": "^2.14.1",
     "gh-pages": "^6.3.0",
+    "handlebars-loader": "^1.7.3",
     "lodash": "^4.17.21",
     "modern-normalize": "^1.1.0",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-transformer-hbs": "^1.0.4"
   },
   "devDependencies": {
