@@ -30,7 +30,6 @@ renderCountries()
 
 const chooseCountry = (e) => {
     if(e.target.closest('.search__country')) {
-        // Set current country code
         currentCountry = e.target.dataset.value
         
         const selectedCountry = e.target.textContent
